@@ -1,0 +1,381 @@
+@import url('https://fonts.googleapis.com/css?family=Spartan&display=swap');
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+    font-family: 'Spartan', sans-serif;
+    list-style: none;
+    text-decoration-color: none;
+    --grayFonts:#a6a6a6;
+    --blueLinkActivee:#00c2cb;
+}
+li, a, button{
+    font-size: 16px;
+    color: var(--grayFonts, gray);
+    text-decoration: none;
+}
+.titleSection h1{
+    color:  var(--grayFonts, gray);
+    
+}
+.underline {
+    border-bottom: 2px solid var(--blueLinkActivee, gray);
+    display: inline-block;
+    line-height: 1.5;
+  }
+/*header and navbar styles*/
+header{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 15px 5%;
+    border: 1px solid #f0ebeb;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 4;
+    background: #fff;
+}
+.logo{
+    cursor:pointer;
+    margin-right: auto;
+}
+.nav__links{
+    list-style: none;
+}
+.nav__links li{
+    display:inline-block;
+    padding: 0px 20px;
+}
+.nav__links li a{
+    transition: all o.3s ease 0s;
+}
+.nav__links li a:hover, a.active{
+    color:var(--blueLinkActivee, blue);
+}
+.checkBtn{
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+    color:#262b33;
+}
+#check{
+    display: none;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 200px;
+    margin-top: 2rem;
+    padding: 1rem;
+}
+#home{
+    display: flex;
+    flex-direction: row;
+}
+#principalTitle{
+    font-size: 3rem;
+    font-weight: 500;
+
+}
+.description{
+    font-size: 1.25rem;
+    color: var(--grayFonts, gray);
+    margin-top:1rem;
+}
+#Presentation{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    color: var(--grayFonts, gray);
+    
+}
+#imgPresentation{
+    display: flex;
+	justify-content:center;
+}
+#circleImage{
+    margin-top:1rem;
+    border-radius: 50%;
+    width: 400px;
+    height: 400px;
+    background-image: url("https://i1.pickpik.com/photos/844/796/21/technology-business-hand-hands-preview.jpg");
+    background-size: cover;
+}
+.groupBtnApp{
+    margin-top: 4rem;
+}
+.btn-icon {
+    padding: 15px 50px;
+    background-color: #22233b;
+    color: #ffffff;
+    display: inline-block;
+    border-radius: 100px;
+    margin-right: 10px;
+    -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.4);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.4);
+}
+.btn-icon:focus, .btn-icon:hover {
+    color: #ffffff;
+    background-color: var(--blueLinkActivee, blue);
+    box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.4);
+}
+.btn-icon .btn-content {
+    position: relative;
+    padding-left: 50px;
+    display: block;
+}
+.btn-icon .btn-content .icon {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    width: 30px;
+}
+.btn-icon .btn-content .icon img {
+    max-width: 100%;
+    height: auto;
+}
+.btn-icon .btn-content small {
+    display: block;
+    font-size: 12px;
+}
+.btn-icon .btn-content strong {
+    display: block;
+    font-size: 18px;
+}
+/*Form*/
+.input{
+    width: 100%;
+    padding: 1rem;
+    border-radius: 6px;
+    border: 1px solid var(--grayFonts, gray);
+    outline: none;
+}
+.form-group {
+    margin: 0 auto 1.25rem auto;
+    
+}
+.form-double {
+    display: flex;
+    flex-direction: row;
+}
+.form-double .form-group.last{
+    margin: 0 0 1.25rem 0.5rem;
+}
+#formContact{
+    margin-top: 1.5rem;
+}
+.btn-default {
+    padding: 20px 50px;
+    border: 1px solid var(--blueLinkActivee, blue);
+    border-radius: 100px;
+    color: var(--blueLinkActivee, blue);
+    padding: 10px 30px;
+    display: inline-block;
+    font-weight: 700;
+    background-color: #ffffff;
+    transition: 0.3s;
+}
+.btn-default:hover {
+    background-color:  var(--blueLinkActivee, blue);
+    color: #ffffff;
+}
+#video{
+    box-shadow: 0 0 10px;
+    margin-top: 2em;
+}
+#full{
+    display: block;
+}
+#mini{
+    display: none;
+}
+ /*Price table*/
+ .container{
+    max-width: 1000px;
+    margin:auto;
+    padding: 40px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.pricing-table{
+    background: #fbfbfb;
+    flex: 1;
+    margin: 10px;
+    text-transform: uppercase;
+}
+.pricing-header{
+    color: #fff;
+    position: relative;
+    margin-bottom: 20px;
+}
+.iconTablePrice{
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 0;
+}
+
+.iconTablePrice span{
+    font-size: 30px;
+}
+.price span{
+    color: var(--blueLinkActivee, blue);
+    font-weight: 700;
+    font-size:30px;
+}
+.title{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%,50%);
+    width: 80%;
+    max-width: 360px;
+    text-align: center;
+    padding: 8px 0;
+}
+.pricing-list{
+    padding: 10px 20px;
+}
+.pricing-list li{
+    margin: 8px 0;
+    font-size: 14px;
+    color: #344;
+    text-align: center;
+}
+.border{
+    width: 80px;
+    height: 1px;
+    background: #ddd;
+    margin: auto;
+}
+.pricing-table a{
+    display: block;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 20px;
+    text-align: center;
+    padding: 8px 0;
+    font-size: 14px;
+    border: 1px solid;
+    max-width: 360px;
+    transition: .2s linear;
+}
+.pricing-table a:hover{
+    border-radius: 30px;
+}   
+.table1 .pricing-header{
+    background: var(--blueLinkActivee, blue);
+}
+.table1 .title{
+    background-image: linear-gradient(125deg, #7bf1f7, #00c2cb, #66a8b3);
+
+}
+
+.table1 a{
+    color:#2980b9;
+}
+.table1 a:hover{
+    background:var(--blueLinkActivee, blue);
+    color: #fff;
+}
+@media(max-width:858px){
+    .checkBtn{
+        display: block;
+    }
+    
+    .nav__links{
+        position:fixed;
+        width: 100%;
+        height: 100vh;
+        background: #262b33;
+        /* top:80px; */
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    .nav__links.noVisible{
+        left: -100%;
+    }
+    .nav__links.visible{
+        left: 0;
+        z-index: 2;
+    }
+    
+    .nav__links li{
+        display:block;
+        margin: 2rem 0;
+        line-height:30px;
+    }
+   
+    .nav__links li a{
+        font-size: 20px;
+    }
+   
+    #check:checked  ~ .nav__links{
+        left: 0;
+        z-index: 2;
+    }
+    .nav__links li a:active ~ .nav__links{
+        left: -100%;
+    }
+    
+    #check:checked  ~ .checkBtn{
+        color: var(--blueLinkActivee, blue);
+        
+    }
+   
+    #home{
+        flex-direction: column;
+    }
+   
+    .form-double {
+        display: flex;
+        flex-direction: column;
+    }
+    .form-double .form-group{
+        margin: 0 0 1.25rem 0 !important;
+    }
+    
+    .btn-icon.playstore{
+        margin-top: 1rem;
+    }
+    #Presentation{
+        width: 100%;
+    }
+    #principalTitle{
+        font-size: 2rem;
+    }
+    .description{
+        font-size: 1rem;
+        margin-top: 1rem;
+    }
+    #circleImage {
+        border-radius: 50%;
+        width: 300px;
+        height: 300px;
+        background-image: url("https://i2.pickpik.com/photos/116/635/668/instagram-social-media-girl-woman-preview.jpg");
+        background-size: cover;
+        margin-top: 1rem;
+    }
+    #full{
+        display: none !important;
+    }
+    #mini{
+        display: block !important;
+    }
+}
+@media screen and (max-width:780px){
+    .pricing-table{
+        flex: 100%;
+    }
+    
+}

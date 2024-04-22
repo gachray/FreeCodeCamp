@@ -1,0 +1,316 @@
+@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic+Coding|Montserrat:200,300,400,500,600,700');
+
+:root {
+  --snow: #ffffff;
+  --grape: #4c005a;
+}
+
+body {
+  border-left: 3rem solid var(--snow);
+  border-right: 3rem solid var(--snow);
+  height: 100%;
+  background: var(--snow);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  text-transform: lowercase;
+  color: var(--grape);
+}
+
+body:after {
+    content: "";
+    position: fixed;
+    z-index: 10000;
+    background: var(--snow);
+    left: 0;
+    right: 0;
+    height: 3rem;
+}
+
+body:after {
+    bottom: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Nanum Gothic Coding', monospace;
+  letter-spacing: 0.1rem;
+}
+
+h1 {
+  position: relative;
+  margin: -10rem 5rem 0 0;
+  padding: 1rem;
+  background-color: var(--snow);
+  font-size: 5rem;
+  text-shadow: 1px 1px 0 var(--snow), 3px 3px 0 var(--grape);
+  color: var(--grape);
+}
+
+h1:before {
+  content: "";
+  display: inline-block;
+  margin-bottom: 0.8rem;
+  margin-right: 1rem;
+  width: 5rem;
+  border: 3px solid var(--grape);
+  box-shadow: 1px 1px 0 var(--snow), 3px 3px 0 var(--grape);
+}
+
+/* h1:after {
+  content: "";
+  display: block;
+  z-index: -1;
+  width: 300px;
+  height: 400px;
+  background-image: url('https://i.pinimg.com/originals/d2/13/0d/d2130d6a82776834620aca4bba5e8735.jpg');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+} */
+
+h2 {
+  margin-bottom: 2rem;
+  font-size: 3rem;
+}
+
+h3 {
+  margin-bottom: 1.2rem;
+  font-size: 1.8rem;
+}
+
+h3 a {
+  border-bottom: 2px dashed var(--snow);
+  padding-bottom: 0.3rem;
+  line-height: 1.5;
+  text-decoration: none;
+  color: var(--snow);
+}
+
+h3 a:hover {
+  border-bottom: none;
+  cursor: crosshair;
+}
+
+h3 a:after {
+  content: ">>";
+  margin-left: 1rem;
+}
+
+main {
+  margin-bottom: 3rem;
+}
+
+nav {
+  position: fixed;
+  justify-content: flex-end;
+  display: flex;
+  z-index: 1000;
+  top: 0;
+  width: calc(100% - 6rem);
+  padding: 1rem 0;
+  background: var(--snow);
+  text-align: right;
+}
+
+nav li {
+  display: inline-block;
+  margin-left: 2rem;
+}
+
+nav a {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.05rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--grape);
+}
+
+p {
+  font-size: 0.9rem;
+  font-weight: 300;
+  letter-spacing: 0.07rem;
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--grape);
+}
+
+#main-img {
+  width: 300px;
+  height: 400px;
+}
+
+#name {
+  position: absolute;
+  top: calc(100vh - 50%);
+  right: 2rem;
+  transform: rotate(90deg) translateY(-50%);
+  font-family: 'Montserrat';
+}
+
+#projects, #find-me {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  padding: 4rem 2rem;
+}
+
+#projects {
+  background: var(--grape);
+  color: var(--snow);
+}
+
+#projects a {
+  color: var(--snow);
+}
+
+#projects div {
+  margin-bottom: 3rem;
+  padding-right: 2rem;
+}
+
+#project-list {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-gap: 3rem 2rem;
+  padding: 0 2rem 0 0;
+  list-style-type: decimal;
+  list-style-position: inside;
+}
+
+#welcome-section {
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  width: auto;
+  height: 100vh;
+  text-align: right;
+}
+
+#welcome-section > span {
+  width: 7rem;
+  height: 7rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.07rem;
+  text-align: center;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.side-link-right {
+  transform: rotate(90deg);
+}
+
+.side-link-left {
+  transform: rotate(-90deg);
+}
+
+@media only screen and (max-width: 910px) {
+  h1 {
+    margin-right: 2rem;
+  }
+  #projects, #find-me {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 770px) {
+  
+  #welcome-section {
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  
+  #welcome-section > span {
+    transform: none;
+    width: 100%;
+    height: auto;
+    padding-top: 0.4rem;
+    text-align: left;
+  }
+  
+  .middle {
+    order: -1;
+  }
+    
+  .side-link-right {
+    margin-bottom: 10rem;
+  }
+}
+
+@media only screen and (max-width: 715px) {
+  
+  #project-list {
+    display: block;
+    padding: 0;
+  }
+  
+  .project-tile:not(:last-child) {
+    margin-bottom: 3rem;
+  }
+    
+}
+
+@media only screen and (max-width: 570px) {
+  body {
+  border: none;
+  }
+  
+  nav {
+    width: 100%;
+    padding: 1rem 0;
+  }
+  
+  nav li:last-child {
+    margin-right: 2rem;
+  }
+  
+  h1 {
+    margin-top: -9rem;
+    font-size: 3rem;
+  }
+  
+  h1:before {
+    display: block;
+    margin-top: 0.5rem;
+    width: 2.5rem;
+    border-width: 2px;
+  }
+  
+  #main-img {
+    margin-right: -4rem;
+    width: 200px;
+    height: auto;
+  }
+  
+  #welcome-section {
+    justify-content: center;
+    text-align: center;
+    padding: 0 2rem;
+  }
+  
+  #welcome-section > span {
+    font-size: 0.7rem;
+    background-color: var(--snow);
+    padding-right: 1rem;
+  }
+  
+  .side-link-left {
+    margin-top: 0.9rem;
+  }
+}
+
+@media only screen and (max-width: 570px) {
+  nav {
+    justify-content: center;
+  }
+  
+  nav a {
+    font-size: 0.6rem;
+  }
+}
